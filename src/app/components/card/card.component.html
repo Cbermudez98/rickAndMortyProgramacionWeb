@@ -1,0 +1,20 @@
+<!-- <div style="border: 1px solid black;">
+  <img [src]="image" alt="" style="width: 18rem;">
+  <h5>name: {{ name }}</h5>
+  <p>genero: {{ gender }}</p>
+  <p>status: {{ status }}</p>
+</div> -->
+<div class="card" style="width: 18rem;">
+  <img [src]="image" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ name }}</h5>
+    <p class="card-text">{{ gender }}</p>
+    @if(status === "Alive") {
+      <p class="text-success">{{ status }}</p>
+    } @else if(status === "unknown") {
+      <p class="text-danger">{{ status }}</p>
+    } @else {
+      <p class="text-warning">{{ status }}</p>
+    }
+  </div>
+</div>
